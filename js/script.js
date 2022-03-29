@@ -3,7 +3,6 @@ let menuBody = document.querySelector(".menu__body");
 
 menuIcon.addEventListener("click", function (e) {
   menuBody.classList.toggle("active");
-  menuIcon.classList.toggle("active");
   document.body.classList.add("lock");
 });
 
@@ -26,3 +25,12 @@ navClose.addEventListener("click", function (e) {
   menuIcon.classList.toggle("active");
   document.body.classList.toggle("lock");
 });
+
+let header = document.querySelector('.header')
+window.onscroll = function(){
+  if(window.pageYOffset > 300){
+      header.classList.add('header-scrolled')
+  }else{
+      header.classList.remove('header-scrolled') 
+  }
+}
